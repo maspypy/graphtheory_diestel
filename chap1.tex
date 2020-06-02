@@ -1,0 +1,146 @@
+\subsection{}
+$2|E| = \sum_v \deg(v)$ より $|E| = \frac12 n(n-1)$. 
+
+\subsection{}
+以下，内周と外周については$d\geq 2$ とする．
+
+このグラフを $G$ として，$d(G) = d$, $\|G\| = \frac{1}{2}\cdot d\cdot 2^d$, $\diam(G) = d$, $g(G) = 4$, 外周は $2^d$．
+
+外周の計算はHamiltonサイクルの存在証明と同値．
+「$C^n \times \{0,1\}$」 が $C^{2n}$ を含むことから（$d=2$ をbase stepとして）帰納法が使える．
+
+\subsection{}
+$C$ の長さが $\sqrt{k}$ 以上であれば示すことはない．
+$C$ の長さが $\sqrt{k}$ 未満であれば、問題のパス $P$ が $C$ と交わる回数も $\sqrt{k}$ 以下である．
+交点から交点までパスに分解すると，どれかのパスは $\sqrt{k}$ 以上の長さを持って，$C$ と合わせて求めたいサイクルが得られる．
+
+
+\subsection{}
+Yes．$G = C^{2k+1}$ のときに $g(G) = 2k+1$, $\diam(G) = k$ となって等号．
+
+\subsection{}
+BFS木の性質．容易である．
+
+\subsection{}
+任意のグラフとあるが，$G\neq \emptyset$ が必要である．
+中心をとって（$G\neq \emptyset$ よりとれる）議論すれば容易．
+
+\subsection{}
+$g = 2k+1$ あるいは $g = 2k + 2$ とおく．
+$g$ が奇数ならば $1$ 点，偶数ならば隣接する $2$ 点を固定．
+これらの点から距離 $n$ の点集合を $D_n$ とする．
+
+$1\leq n < k$ ならば $v\in D_n$ の近傍 $N(v)$ は $D_{n-1}\cup D_n \cup D_{n+1}$ に含まれる．
+$D_{n-1}$ に少なくとも $1$ 点の近傍がある．$D_{n-1}\cup D_n$ に $2$ 点あると $g$ より小さな閉歩道ができて矛盾．
+$N(v)$ の元は，唯一の $D_{n-1}$ の点および $D_{n+1}$ の点からなることが分かる．
+
+特に，$d-1$ 個以上の $D_{n+1}$ の点と接続する．また再び内周の議論から $u,v \in D_n$ に対して
+$N(u)\cap N(v) = \emptyset$ がいえるのでこれらの点は $v$ ごとにdisjoint．
+$|D_{n+1}|\geq (d-1) |D_n|$がいえる．
+
+あとは $D_0$ が $1$, $2$ 点であることを使って下から評価すればできる．
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
