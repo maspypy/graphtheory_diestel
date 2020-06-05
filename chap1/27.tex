@@ -1,2 +1,26 @@
 \subsection{}
+木から葉を除いたものは再び木になることに注目すると帰納法ができる．
+全部 $T$ でつらいので，部分木は $A$ と書いていく．
 
+\begin{enumerate}
+ \item $|T|$ に関する帰納法．$|T| = 1$ はよい．
+
+ 葉 $v$ をとる．任意の $A \in \calT$ が $v$ を含むならよい．
+ そうでないとすると，$v$ を含まない $A_0$ がとれて，任意の $A\in \calT$ に対して $A\cap A_0\neq \emptyset$ より
+ $A\neq \{v\}$ である．よって各 $A$ に対して $A' = A\setminus v$ は木である．
+ 木 $T - v$ と $\calT' = \{A'\mid A\in \calT\}$に対して帰納法が使えばよい．
+ \item $|T|$ に関する帰納法．$|T|=1$ はよい．
+
+ 葉 $v$ をとる．$A\in \calT$ に対して $A' = A\setminus v$ とする．
+ \begin{enumerate}
+  \item $\{v\} \in \calT$ のとき．$\calT' = \{T\in \calT\mid v\notin T\}$ とする．
+  $(T, \calT, k) = (T-v, \calT', k-1)$ に帰納法の仮定を使う．
+  $\calT'$ から $(k-1)$ 個の disjoint trees がとれるならば，それと $\{v\}$ を合わせたものが $k$ 個の $\calT$ の disjoint trees になるのでよい．
+  そうでないなら高々 $(k-2)$ 元集合 $X'$ であって任意の $\calT'$ の元と交わるものが存在する．
+  $X = X' \cup \{v\}$ が高々 $(k-1)$ 元かつ任意の $\calT$ の元と交わるので示された．
+  \item $\{v\}\notin \calT$ のとき．$A\in \calT$ に対して $A'$ は木である．
+  $\calT' = \{A'\mid A\in \calT\}$ とする．$(T, \calT, k) = (T-v, \calT', k)$ に対して帰納法の仮定を用いる．
+  $k$ disjoint trees がとれるなら，それに対応する $\calT$ の trees が条件を満たす．
+  そうでないなら高々 $(k-1)$ 元集合で任意の $\calT'$ の元と交わるものが存在し，これが $\calT'$ に対しても条件を満たす．
+ \end{enumerate}
+\end{enumerate}

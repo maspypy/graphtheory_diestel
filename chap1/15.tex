@@ -1,2 +1,12 @@
 \subsection{}
+次のように定式化できる．
+\begin{enumerate}
+ \item $\exists f\colon \N\longrightarrow \N$, $\beta \leq f(\alpha)$. 
+ \item $\forall N, \exists M, \beta\geq M \implies \alpha\geq N$. 
+ \item $\exists g\colon \N\longrightarrow \N$, $\alpha\leq g(\beta)$. 
+\end{enumerate}
 
+(i) $\implies$ (ii)：$M = \max_{1\leq i\leq N} f(i)$ とすればよい．
+(ii) $\implies$ (i)：(ii) の $M$ を $f_0(N)$ とするとき，$f(N) = f_0(N+1)$ が条件を満たす（(ii)の対偶を見れば分かる）．
+
+(iii) が同値にならない例として，例えば任意のグラフ $G$ に対して $\beta(G) = 0$ となる $\beta$ は反例になる．
