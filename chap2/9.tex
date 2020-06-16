@@ -1,1 +1,7 @@
 \subsection{}
+各 $A_i$ に対して，$d_i$ 個の頂点 $A_i^{(j)}$ を作る．$x\in A_i$ と  $A_i^{(j)}$ を結ぶ（$j$ に関しては同じ結び方になっている）ことで二部グラフを作る．
+このグラフの完全マッチングができれば，マッチングにおいて $A_i^{(j)}$ たちと隣接する頂点全体を $D_i$ とすることで欲しいものが得られる．
+よって完全マッチングの存在を示せばよい．そのためには marriage condition を確かめればよい．
+
+marriage condition を考える際，$A_i^{(j)}$ の形の頂点は，$1$ つ以上含むならば全て含むとしてよい．その場合の marriage condition が
+不等式 $\biggl\lvert \bigcup_{i} A_i\biggr\rvert \geq \sum_{i}d_i$ に対応する．
