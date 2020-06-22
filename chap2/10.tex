@@ -1,1 +1,24 @@
 \subsection{}
+$X = \{1,2,\ldots,n\}$ とする．
+
+\paragraph*{証明1}
+
+\paragraph*{証明2（「離散数学への招待」による鎖の構成）}
+$S\subset X$ に対して，文字列 $f(S)$ を対応させる．
+$i$ 文字目に，$i\in S$ であるか否かに応じて (, ) をあてる．
+
+\begin{tabular}{|l|c|}
+\hline
+$S$ & $f(S)$ \\\hline
+$2,3,5,9$ & ) \textcolor{red}{( ( ) ( ) )} ) \textcolor{red}{( )} ) )\\\hline
+$2,3,5,9,12$ &  ) \textcolor{red}{( ( ) ( ) )} ) \textcolor{red}{( )} ) (\\\hline
+$2,3,5,9,11,12$ &  ) \textcolor{red}{( ( ) ( ) )} ) \textcolor{red}{( )} ( (\\\hline
+$2,3,5,8,9,11,12$ &  ) \textcolor{red}{( ( ) ( ) )} ( \textcolor{red}{( )} ( (\\\hline
+$1,2,3,5,8,9,11,12$ &  ( \textcolor{red}{( ( ) ( ) )} ( \textcolor{red}{( )} ( (\\\hline
+\end{tabular}
+
+$f(S)$ における括弧が対応つく部分・対応のつき方が同一であるような $S$ を集める．
+括弧列の対応箇所，対応方法を固定した場合，$f(S)$ の残りの部分の選択肢は $)))\cdots ))(((\cdots ($ のように，2種の括弧の境界をどこに置くかしかない．
+よって鎖になること，また $S$ として $k, k+1, \ldots, n-k$ 元集合がひとつずつ含まれることが分かる．
+
+特に，任意の鎖が $\lfloor \frac{n}{2}\rfloor$ 元部分集合を唯一含むような鎖に分解できた．
