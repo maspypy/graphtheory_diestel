@@ -2,6 +2,15 @@
 $X = \{1,2,\ldots,n\}$ とする．
 
 \paragraph*{証明1}
+$\emptyset\subset \{a_1\}\subset \{a_1,a_2\}\subset \cdots \{a_1,\ldots, a_n\} = X$ の形の鎖は $n!$ 個ある．
+
+$A$ を反鎖とする．$S\subset A$ に対して，$S$ を通る極大鎖 （上の形の鎖）全体を $f(S)$ とする．
+反鎖より $S, T\in A$ （$S\neq T$） に対して $f(S) \cap f(T) = \emptyset$ である．
+特に $\sum_{S\in A}|f(S)| \leq n!$ が分かる．
+
+$|f(S)| = |S|!(n-|S|)! = \frac{n!}{\binom{n}{|S|}} \geq \frac{n!}{\binom{n}{\lfloor n/2\rfloor}}$であるから
+$\sum_{S\in A}\frac{n!}{\binom{n}{\lfloor n/2\rfloor}} \leq n!$ となって，$|A|\leq \binom{n}{\lfloor n/2\rfloor}$ を得る．
+
 
 \paragraph*{証明2（「離散数学への招待」による鎖の構成）}
 $S\subset X$ に対して，文字列 $f(S)$ を対応させる．
