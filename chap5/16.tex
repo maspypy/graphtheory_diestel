@@ -1,1 +1,31 @@
 \subsection{}
+\paragraph{(i) $\implies$ (iii)}
+$k$ 色以下の彩色 $c$ をとり，辺 $e = uv$ の向きを，$c(u) < c(v)$ であるか否かによって $u$ から $v$，$v$ から $u$ と定めれば，
+条件を満たすことは容易に確かめられる．
+
+\paragraph{(iii) $\implies$ (ii)}
+自明．
+
+\paragraph{(ii) $\implies$ (i)}
+(ii) の向き付けを固定し，$G$ は有向グラフであるとして扱う．
+$H\subset G$ を，$G$ の部分グラフかつDAGであるもののうち極大なものとする．
+
+$H$ の topological 順序 $(v_1,v_2,\ldots)$ をひとつ固定する．次の要領で貪欲に着色 $c$ を構成する：
+\[
+ c(v) = \max\{c(u)\mid uv \in H\} + 1.
+\]
+ただし，$u$ が存在しない場合には $c(v) = 0$ とする．
+
+次の性質が容易に確かめられる：
+\begin{enumerate}
+ \item[(a)] $uv\in H\implies c(u) < c(v)$．
+ \item[(b)] $c(v) > 1 \implies \exists u, uv\in H, c(v) = c(u) + 1$．
+\end{enumerate}
+
+性質 (b) より，各頂点 $v$ に対して $v$ を終点とする長さ $c(v)$ の有向パスが存在する．
+(ii) の仮定より $c(v) < k$ である．よって着色 $c$ は $k$ 色以下からなる．これが彩色であることを確かめればよい．
+
+性質 (a) より，$H$ に含まれる有向辺 $uv$ については端点の色は異なる．
+$uv\in E(G)\setminus E(H)$ とする．$H$ の極大性より，有向 $vu$ パスが存在する．したがって性質 (a) より $c(v) < c(u)$ であるから
+この場合も $u,v$ の色は異なる．
+以上により示された．

@@ -1,1 +1,43 @@
 \subsection{}
+$\chi(G) = k$ かつ三角形を含まないグラフ $G$ をもとにして，$k+1$ の場合のそれを作る．
+$G = \{v_1,\ldots,v_n\}$ とする．
+
+$\overline{G}$ を以下のようにつくる：
+\begin{itemize}
+ \item $V(\overline{G}) = \{v_1,\ldots,v_n\} \amalg \{u_1,\ldots,u_n\} \amalg \{w\} = V \amalg U\amalg \{w\}$．
+ \item $V$ の頂点間は，$G$ と同様に辺を張る．
+ \item $v_iv_j\in E(G)$ であるか否かにしたがって，$v_iu_j$ に辺を張る・張らない．
+ \item $U$ の頂点間には辺を張らない．
+ \item $V$ と $\{w\}$ の間には辺を張らない．
+ \item 任意の $u\in U$ に対して $u$ と $w$ の間に辺を張る．
+\end{itemize}
+
+{\Huge 図！}
+
+次を示せばよい．
+
+\begin{enumerate}
+ \item[(a)] $\overline{G}$ は三角形を含まない．
+ \item[(b)] $\chi(\overline{G})\leq k+1$．
+ \item[(c)] $\chi(\overline{G})\geq k+1$．
+\end{enumerate}
+
+\paragraph{(a)の証明}
+$w$ は $U$ の点としか隣接せず，$U$ の点どうしは隣接しないので，$w$ を含む三角形は存在しない．
+$G$ に対する仮定より，$V$ の点だけからなる三角形は存在しない．
+また，$U$ の点同士は隣接しない．よって，$v_iv_ju_k$ の形の三角形が存在しないことを示せばよい（$v_i,v_j\in V, u_k\in U$）．
+$v_iv_ju_k$ が $\overline{G}$ の三角形であるとすると，$v_iv_jv_k$ は $G$ の三角形となるので示された．
+
+\paragraph{(b)の証明}
+$c\colon G\longrightarrow \{1,2,\ldots,k\}$ を $G$ の $k$ 彩色とする．
+$\overline{c}\colon \overline{G}\longrightarrow \{1,2,\ldots,k+1\}$ を次のようにつくる：
+$\overline{c}(v_i) \overline{c}(u_i) = c(v_i)$, $\overline{c}(w) = k+1$．これが彩色になることは容易に確かめられる．
+
+\paragraph{(c)の証明}
+$\overline{c}\colon \overline{G}\longrightarrow \{1,2,\ldots,k\}$ を $k$ 彩色が存在したと仮定．
+$\overline{c}(w) = k$ としてよい．
+$c(v_i) = \begin{cases}\overline{c}(v_i) & (\overline{c}(v_i)\neq k)\\ \overline{c}(u_i) & (\overline{c}(v_i) = k)\end{cases}$ により
+$c\colon G\longrightarrow \{1,2,\ldots,k-1\}$ を定めると，$G$ の彩色になる．$\chi(G) = k$ に矛盾．
+
+
+\noindent\textbf{参考：}Mycielski, J. (1955), “Sur le coloriage des graphes”, Colloq. Math. 3: 161–162. 
