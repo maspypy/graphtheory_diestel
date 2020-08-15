@@ -1,1 +1,23 @@
 \subsection{}
+$G=(A,B)$ を二部グラフ．$H$ を $A$ を含む部分グラフで marriage condition を満たすもののうち，辺数について極小なものとする．
+$\forall b\in V\cap H, d_H(b)\leq 1$ を示す．
+
+そうでないとして矛盾を導く．相異なる $a_1,a_2\in A$ であって $a_1b, a_2b\in H$ となるものをとる．
+$H-a_1b$ が marriage condition を満たさないことから，$A_1\subset A$ であって，$B_1 = N_{H\setminus a_1b}(A_1)$ が $|A_1|>|B_1|$ を満たすものが存在．
+同様に $A_2, B_2$ もとる．
+
+$H$ は marriage condition を満たすことから，$a_1\in A$ かつ $b\notin B_1$ が分かる．
+$a_1\neq a_2$ かつ $b\notin B_2$ より，$a_1\notin A_2$ が分かる．
+よって $N_H(A_1\cap A_2) \subset N_H(A_1\setminus a_1) \subset B_1$ である．同様に $N_H(A_1\cap A_2)\subset B_2$ より
+$N_H(A_1\cap A_2) \subset B_1\cap B_2$ である．
+
+次の式変形ができる（3番目の不等号に $N_H(A_1\cap A_2) \subset B_1\cap B_2$ を用いる）：
+\begin{align*}
+ N_H(A_1\cup A_2)
+ &= |B_1\cup B_2\cup\{b\}|\\
+ &= |B_1| + |B_2| - |B_1\cap B_2| + 1\\
+ &\leq (|A_1|-1) + (|A_2|-1) - N_H(A_1\cap A_2) + 1\\
+ &\leq |A_1| + |A_2| - |A_1\cap A_2| - 1\\
+ &= |A_1\cup A_2| - 1. 
+\end{align*}
+$H$ が $A_1\cup A_2$ に関して marriage condition を満たさず矛盾．示された．
