@@ -1,1 +1,12 @@
 \subsection{}
+$P$ を有限 poset とする．
+$c$ を最も長い chain の長さ，$a$ を $P$ を被覆する antichain の最小数とする．
+
+反鎖分解において chain の各要素は異なる反鎖に属することから，$c\leq a$ が分かる．
+\[
+ f(p) = \max\{n\mid \exists p_1\leq p_2\leq\cdots\leq p_n = p\}
+\]
+とおく．$1\leq f(p)\leq c$ が成り立つ．各 $1\leq i\leq c$ に対して $A_i = \{p\in P\mid f(p) = i\}$ とすれば，
+$A_1\ldots A_n$ が $c$ 個の反鎖への分解を与える．したがって，$c\geq a$．
+
+以上で $a=c$ が示された．

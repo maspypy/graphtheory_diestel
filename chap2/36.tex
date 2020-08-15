@@ -1,1 +1,20 @@
 \subsection{}
+$G=(V, E) = (A\amalg B, E)$ を二部グラフとする．
+$x\leq x$ の他に，$ab\in E$ となる $a\in A, b\in B$ に対して $a\leq b$ と定めることで，$G$ を poset と見なす．
+\begin{enumerate}
+ \item $G$ の最大マッチングの大きさを $n_1$．
+ \item $G$ の最小頂点カバーの大きさを $n_2$．
+ \item $G$ の最小鎖被覆の大きさを $n_3$．
+ \item $G$ の最大反鎖の大きさを $n_4$ とする．
+\end{enumerate}
+
+$n_2 = |V| - n_4$ を示す．
+$S$ が頂点カバーであることと，$ab\in E\implies a\in S \text{or} b\in S$ は同値．
+対偶をとって $A = G\setminus S$ とすることで，この条件は
+$a\in A \text{and} b\in B\implies ab\notin E$ と書き換えられる．
+これは，$A$ が反鎖であることと同値．したがって $n_2 = |V| - n_4$ を得る．
+
+$n_1 = |V| - n_3$ を示す．$G$ の鎖への分解とは，$1$ 点または辺への分解に他ならない．
+最小鎖被覆は辺を最も多く選んだ場合，したがって最大マッチングの場合に実現されるので，$n_1 = |V| - n_3$ が分かる．
+
+したがって，$n_3=n_4\implies n_1=n_2$ であるから，Dilworth の定理は K\"{o}nig の定理を特殊ケースとして含んでいる．
