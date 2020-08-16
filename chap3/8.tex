@@ -1,1 +1,33 @@
 \subsection{}
+$e \in E(G)$ とし，縮約を $\pi\colon G\longrightarrow G/e$ と書く．
+$X\subset G/e$ に対して $\overline{X} = \pi^{-1}(X)$ とする．
+このとき，$a,b \in G\setminus X$ に対して次は同値である．
+\begin{itemize}
+ \item $G\setminus \overline{X}$ において $ab$ パスが存在する．
+ \item $(G/e)\setminus X$ において $\pi(a)\pi(b)$ パスが存在する．
+\end{itemize}
+
+このことを踏まえて，問題の主張を示す．
+$G/xy$ が $k$ 連結であることは，次がともに成り立つことと同値．
+\begin{itemize}
+ \item $|G/xy| \geq k + 1$．
+ \item 任意の $k-1$ 元部分集合 $X\subset G/xy$ に対して，$(G/xy)\setminus X$ は連結．
+\end{itemize}
+これらはさらに次と同値．
+\begin{itemize}
+ \item $|G| \geq k + 2$．
+ \item 任意の $k-1$ 元部分集合 $X\subset G/xy$ に対して，$G\setminus \pi^{-1}(X)$ は連結．
+\end{itemize}
+$G$ は $k$ 連結であるから，$|\pi^{-1}(X)| \leq k-1$ の場合には後者の主張は成り立つ．
+したがって，$|\pi^{-1}(X)| = k$ の場合の主張と同値．これは，$x,y\in X$ の場合に対応し，$\pi^{-1}(X)$ は
+$x,y$ を含む $k$ 元集合を動く．よって次のように同値変形される．
+\begin{itemize}
+ \item $|G| \geq k + 2$．
+ \item $x,y$ を含む任意の $k$ 元部分集合 $X\subset G$ に対して，$G\setminus X$ は連結．
+\end{itemize}
+$G' = G\setminus\{x,y\}$ とすると，これは次と同値であることは容易に分かる．
+\begin{itemize}
+ \item $|G'| \geq k$．
+ \item 任意の $k-2$ 元部分集合 $X\subset G'$ に対して，$G'\setminus X$ は連結．
+\end{itemize}
+これは $G'$ が $k-1$ 連結であるという主張に他ならない．
